@@ -9,50 +9,64 @@
     <link rel="stylesheet" href="./dist/css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- STEP 1 -->
-
-    <header>
-        <img src="./dist/img/Logo.svg" alt="">
-        <div class="safe-and-secure"><img src="./dist/img/Padlock.svg" alt="">Safe & Secure</div>
-        <div class="progress-bar">
-            <div class="one">1</div>
-            <div class="two">2</div>
-            <div class="three">3</div>
-            <hr class="line">
+    <section class="step-1">
+        <div class="step-1__elipse-1"></div>
+        <div class="step-1__elipse-2"></div>
+        <div class="step-1__noise">
+            <img src="./dist/img/Noise.svg" alt="">
         </div>
-        <div class="providers">
-            <img src="./dist/img/Providers.svg" alt="">
+        <header class="step-1__header">
+            <img src="./dist/img/Logo.svg" alt="">
+            <div class="step-1__safe-and-secure">
+                <img src="./dist/img/Padlock.svg" alt="">Safe & Secure
+            </div>
+        </header>
+        <div class="step-1__progression-and-providers">
+            <div class="step-1__progress-bar">
+                <div class="step-1__circle--one">1</div>
+                <div class="step-1__circle--two">2</div>
+                <div class="step-1__circle--three">3</div>
+                <hr class="step-1__line">
+            </div>
         </div>
-    </header>
-    <main>
-        <div class="main-content">
-            <div class="heading">
+        <main class="step-1__main">
+            <div class="step-1__main-content">
+                <div class="step-1__providers">
+                    <img src="./dist/img/Sky.svg" alt="">
+                    <img src="./dist/img/BT.svg" alt="">
+                    <img src="./dist/img/CC.svg" alt="">
+                    <img src="./dist/img/Vigin Media.svg" alt="">
+                    <img src="./dist/img/Vodafone.svg" alt="">
+                </div>
                 <h1>Find Great Broadband Deals In Your Area</h1>
+                <div class="step-1__info">
+                    <h2>What's your postcode?</h2>
+                    <p>Enter your postcode and click 'Find adress'. <br> Then choose your adress</p>
+                </div>
+                <div class="step-1__inputs-and-buttons">
+                    <input class="step-1__input" type="text" placeholder="eg. SW1A 1AA">
+                    <button class="step-1__button">Find Address</button>
+                </div>
             </div>
-            <div class="info">
-                <h2>What's your poscode?</h2>
-                <p>Enter your postcode and click 'Find adress'. <br> Then choose your adress</p>
+        </main>
+        <footer class="step-1__footer">
+            <div class="step-1__swap-my-bills">
+                <p>SwapMyBills.com is a trading name of Client Flo Media Limited.
+                    Registered Office Address - 5-9 Main Street, GX11 1AA. Company Number 120004.</p>
             </div>
-        </div>
-        <input type="text" placeholder="eg. SW1A 1AA">
-        <button class="find-address">Find Address</button>
-    </main>
-    <footer>
-        <div class="swap-my-bils">
-            <p>SwapMyBills.com is a trading name of Client Flo Media Limited.
-                Registered Office Address - 5-9 Main Street, GX11 1AA. Company Number 120004.</p>
-        </div>
-        <div class="copyrights">
-            <p>Copyright © 2021 SwapMyBills.com</p>
-            <p>Terms</p>
-            <p>Privacy Policy</p>
-        </div>
-    </footer>
+            <div class="step-1__copyrights-and-terms">
+                <p>Copyright © 2021 SwapMyBills.com</p>
+                <p>Terms</p>
+                <p>Privacy Policy</p>
+            </div>
+        </footer>
+    </section>
     <script src="./dist/js/main.min.js"></script>
 </body>
 
