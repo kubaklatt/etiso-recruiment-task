@@ -243,3 +243,112 @@ html {
 		}
 	}
 }
+
+// MEDIA
+
+@media (min-width: 150px) and (max-width: 312px) {
+	.step-1 {
+		&__header {
+			gap: 10px;
+		}
+		&__line {
+			top: 78px;
+			left: 12.55%;
+			right: 12.55%;
+		}
+
+		&__swap-my-bills {
+			p {
+				font-size: 11px;
+			}
+		}
+
+		&__copyrights-and-terms {
+			p {
+				font-size: 9px;
+			}
+		}
+	}
+}
+
+@media (min-width: 313px) and (max-width: 337px) {
+	.step-1 {
+		&__line {
+			top: 76px;
+			left: 5.55%;
+			right: 5.55%;
+		}
+
+		&__swap-my-bills {
+			p {
+				font-size: 11px;
+			}
+		}
+
+		&__copyrights-and-terms {
+			p {
+				font-size: 9px;
+			}
+		}
+	}
+}
+
+@media (min-width: 338px) and (max-width: 365px) {
+	.step-1 {
+		&__line {
+			top: 85px;
+		}
+
+		&__swap-my-bills {
+			p {
+				font-size: 11px;
+			}
+		}
+
+		&__copyrights-and-terms {
+			p {
+				font-size: 11px;
+			}
+		}
+	}
+}
+
+@media (min-width: 366px) and (max-width: 481px) {
+	.step-1 {
+		&__line {
+			top: 97px;
+		}
+
+		&__swap-my-bills {
+			p {
+				font-size: 12px;
+			}
+		}
+
+		&__copyrights-and-terms {
+			p {
+				font-size: 11px;
+			}
+		}
+	}
+}
+
+@media (min-width: 482px) and (max-width: 481px) {
+	.step-1 {
+		&__line {
+			top: 97px;
+		}
+
+		&__swap-my-bills {
+			p {
+				font-size: 12px;
+			}
+		}
+
+		&__copyrights-and-terms {
+			p {
+				font-size: 11px;
+			}
+		}
+	}
+}
