@@ -149,6 +149,7 @@ html {
 	}
 
 	&__button {
+		display: none;
 		cursor: pointer;
 		background-color: #ff782d;
 		border-radius: 5px;
@@ -160,6 +161,42 @@ html {
 		line-height: 32px;
 		font-size: 24px;
 		text-align: center;
+	}
+
+	&__results {
+		gap: 20px;
+		ul {
+			list-style: none;
+			background-color: #ffffff;
+			box-shadow: 0px 4px 16px #cccccc;
+			border-radius: 5px;
+			padding: 11px 16px;
+			font-size: 14px;
+			line-height: 21px;
+
+			ul:after {
+				content: '';
+				position: absolute;
+				z-index: 1;
+				bottom: 0;
+				left: 0;
+				pointer-events: none;
+				background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 90%);
+				width: 100%;
+				height: 4em;
+			}
+
+			li {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 10px 0;
+			}
+		}
+		p {
+			color: #4f4ced;
+			line-height: 28px;
+		}
 	}
 
 	// --------------------------
