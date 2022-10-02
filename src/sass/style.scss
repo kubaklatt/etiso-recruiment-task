@@ -16,7 +16,7 @@ html {
 // STEP 1 - MOBILE FIRST
 
 .step-1 {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100vh;
@@ -149,7 +149,7 @@ html {
 	}
 
 	&__button {
-		display: none;
+		display: flex;
 		cursor: pointer;
 		background-color: #ff782d;
 		border-radius: 5px;
@@ -164,7 +164,10 @@ html {
 	}
 
 	&__results {
+		display: none;
+		flex-direction: column;
 		gap: 20px;
+		padding-bottom: 30px;
 		ul {
 			list-style: none;
 			background-color: #ffffff;
@@ -174,28 +177,59 @@ html {
 			font-size: 14px;
 			line-height: 21px;
 
-			ul:after {
-				content: '';
-				position: absolute;
-				z-index: 1;
-				bottom: 0;
-				left: 0;
-				pointer-events: none;
-				background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 90%);
-				width: 100%;
-				height: 4em;
-			}
-
 			li {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
 				padding: 10px 0;
+
+				[type='checkbox'] {
+					width: 24px;
+					height: 24px;
+					color: #cccccc;
+					vertical-align: middle;
+					-webkit-appearance: none;
+					background: none;
+					border: 0;
+					outline: 0;
+					flex-grow: 0;
+					border-radius: 50%;
+					background-color: #ffffff;
+					transition: background 300ms;
+					cursor: pointer;
+				}
+
+				[type='checkbox']::before {
+					content: '';
+					color: transparent;
+					display: block;
+					width: inherit;
+					height: inherit;
+					border-radius: inherit;
+					border: 0;
+					background-color: transparent;
+					background-size: contain;
+					box-shadow: inset 0 0 0 1px #ccd3d8;
+				}
+
+				[type='checkbox']:checked {
+					background-color: #4f4ced;
+				}
+
+				[type='checkbox']:checked::before {
+					box-shadow: none;
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M15.88 8.29L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z' fill='%23fff'/%3E %3C/svg%3E");
+				}
 			}
 		}
 		p {
 			color: #4f4ced;
 			line-height: 28px;
+
+			a {
+				text-decoration: none;
+				color: #4f4ced;
+			}
 		}
 	}
 
@@ -355,6 +389,10 @@ html {
 			align-items: flex-end;
 		}
 
+		&__results {
+			width: 100%;
+		}
+
 		&__input {
 			padding: 20px;
 		}
@@ -372,8 +410,8 @@ html {
 			justify-content: space-between;
 			align-items: center;
 			flex-direction: row;
-			margin: 16px 0 6px;
-			padding: 14px 100px;
+			margin: 16px 0 10px;
+			padding: 14px 100px 10px;
 		}
 
 		&__swap-my-bills {
@@ -396,6 +434,134 @@ html {
 			p {
 				font-size: 12px;
 			}
+		}
+	}
+}
+
+// STEP 2
+
+.step-2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+
+	// STEP 1 - HEADER
+
+	&__header {
+		margin: 16px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__safe-and-secure {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		font-size: 14px;
+	}
+
+	// --------------------------
+
+	// STEP 1 - MAIN
+
+	&__main {
+		margin: 0px 16px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	&__main-content {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		h1 {
+			font-size: 30px;
+			color: #001429;
+			line-height: 40px;
+			letter-spacing: -0.01em;
+		}
+	}
+
+	&__progress-bar {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		counter-reset: step;
+		margin: 0 16px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			height: 3px;
+			width: 100%;
+			background-color: #001429;
+			z-index: -1;
+		}
+	}
+
+	&__progress-step {
+		width: 23px;
+		height: 23px;
+		background-color: #f9fafb;
+		border-radius: 50%;
+		font-size: 14px;
+		font-weight: 700;
+		color: #001429;
+		border: 2px solid #001429;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&::before {
+			counter-increment: step;
+			content: counter(step);
+		}
+
+		&--active {
+			background-color: #4f4ced;
+			border: 2px solid #001429;
+			color: #ffffff;
+		}
+	}
+
+	&__providers {
+		display: flex;
+		justify-content: space-between;
+
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	&__questions {
+		display: flex;
+		flex-direction: column;
+
+		select {
+			font-size: 16px;
+			line-height: 28px;
+			color: #001429;
+			box-shadow: 0px 4px 16px #cccccc;
+			border-radius: 5px;
+			padding: 20px;
+			width: 100%;
+			border: none;
+		}
+
+		label {
+			font-size: 18px;
+			line-height: 28px;
+			font-weight: 700;
+			letter-spacing: -0.01em;
+			color: #001429;
 		}
 	}
 }
