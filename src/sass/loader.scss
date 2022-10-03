@@ -1,0 +1,51 @@
+.loader {
+	display: none;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+	&__bubble {
+		animation: expand 0.75s ease-in-out infinite;
+		border-radius: 20px;
+		display: inline-block;
+		transform-origin: center center;
+		margin: 0 8.5px;
+		width: 25px;
+		height: 25px;
+
+		&:nth-child(1) {
+			background: #4f4ced;
+		}
+
+		&:nth-child(2) {
+			animation-delay: 180ms;
+			background: #4f4ced;
+		}
+
+		&:nth-child(3) {
+			animation-delay: 360ms;
+			background: #4f4ced;
+		}
+	}
+
+	@keyframes expand {
+		0% {
+			transform: scale(1);
+			opacity: 1;
+		}
+		25% {
+			transform: scale(1.55);
+			opacity: 0.7;
+		}
+		50% {
+			opacity: 0.5;
+		}
+		75% {
+			opacity: 0.3;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+}

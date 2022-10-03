@@ -1,0 +1,33 @@
+.footer {
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	margin: 16px 0 0;
+	padding: 16px;
+	gap: 20px;
+
+	&__swap-my-bills {
+		display: flex;
+
+		p {
+			line-height: 21px;
+			font-size: 12px;
+			color: #001429;
+		}
+	}
+
+	&__copyrights-and-terms {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&__terms-and-policy {
+		display: flex;
+		gap: 50px;
+
+		p {
+			font-size: 12px;
+		}
+	}
+}

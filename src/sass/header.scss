@@ -1,0 +1,14 @@
+.header {
+	margin: 16px;
+	display: flex;
+	justify-content: space-between;
+
+	&__safe-and-secure {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		font-size: 14px;
+	}
+}

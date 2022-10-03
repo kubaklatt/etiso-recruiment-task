@@ -1,0 +1,60 @@
+// BACKGROUND
+
+.vector {
+	&__square {
+		position: fixed;
+		left: 82%;
+		top: 12%;
+		z-index: -5;
+	}
+
+	&__arrow-1 {
+		position: fixed;
+		left: 90%;
+		top: 40%;
+		z-index: -5;
+	}
+	&__arrow-2 {
+		position: fixed;
+		left: 89%;
+		top: 25%;
+		z-index: -5;
+	}
+}
+
+.noise {
+	position: absolute;
+	top: 5%;
+	left: 75%;
+	height: 100%;
+	z-index: -15;
+	mix-blend-mode: overlay;
+}
+
+.eclipses {
+	&__eclipse--pink {
+		position: fixed;
+		left: 75%;
+		top: 50%;
+		width: 1000px;
+		height: 1000px;
+		background: rgb(235, 87, 140);
+		background: radial-gradient(circle, rgba(235, 87, 140, 1) 0%, rgba(229, 229, 229, 1) 100%);
+		opacity: 0.5;
+		filter: blur(75px);
+		z-index: -20;
+	}
+
+	&__eclipse--blue {
+		position: fixed;
+		left: 75%;
+		bottom: 50%;
+		width: 1000px;
+		height: 1000px;
+		background: rgb(128, 125, 255);
+		background: radial-gradient(circle, rgba(128, 125, 255, 1) 0%, rgba(249, 250, 251, 1) 100%);
+		opacity: 0.5;
+		filter: blur(75px);
+		z-index: -20;
+	}
+}

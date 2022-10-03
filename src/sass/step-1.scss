@@ -1,0 +1,62 @@
+.step-1 {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	margin: 0px 16px;
+	gap: 40px;
+
+	h1 {
+		font-size: 30px;
+		color: #001429;
+		line-height: 40px;
+		letter-spacing: -0.01em;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+
+		h2 {
+			color: #001429;
+			font-size: 22px;
+			line-height: 35px;
+			letter-spacing: -0.01em;
+		}
+
+		p {
+			line-height: 28px;
+			color: #001429;
+			font-size: 14px;
+		}
+	}
+
+	&__inputs-and-buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	&__input {
+		box-shadow: 0px 4px 16px #cccccc;
+		border-radius: 5px;
+		padding: 20px;
+		width: 100%;
+		border: none;
+	}
+
+	&__button {
+		display: none;
+		cursor: pointer;
+		background-color: #ff782d;
+		border-radius: 5px;
+		border: none;
+		width: 100%;
+		padding: 16px 33px;
+		color: white;
+		font-weight: 700;
+		line-height: 32px;
+		font-size: 24px;
+		text-align: center;
+	}
+}
