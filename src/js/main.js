@@ -1,13 +1,17 @@
 // QUERY SELECTORS:
 const progressBar = document.querySelector('.progress-bar')
+const progressBarFirst = document.querySelector('.progress-bar__step__first')
+const progressBarSecond = document.querySelector('.progress-bar__step__second')
+const progressBarThird = document.querySelector('.progress-bar__step__third')
+
 const providers = document.querySelector('.providers')
 const footer = document.querySelector('.footer')
 
 const stepOne = document.querySelector('.step-1')
 const stepOneBtn = document.querySelector('.step-1__button')
 
-const continueBtn = document.querySelector('.step-1-1__continue-button')
 const stepOneOne = document.querySelector('.step-1-1')
+const stepOneOneBtn = document.querySelector('.step-1-1__continue-button')
 
 const stepTwo = document.querySelector('.step-2')
 const stepTwoBtn = document.querySelector('.step-2__continue-button')
@@ -25,6 +29,7 @@ function loadingStep() {
 	progressBar.style.display = 'flex'
 	stepThree.style.display = 'flex'
 	footer.style.display = 'flex'
+	progressBarThird.classList.add('active')
 }
 
 function stepOneToStepOneOne() {
@@ -36,6 +41,7 @@ function stepOneOneToStepTwo() {
 	stepOne.style.display = 'none'
 	stepOneOne.style.display = 'none'
 	stepTwo.style.display = 'flex'
+	progressBarSecond.classList.add('active')
 }
 
 function stepTwoToLoader() {
@@ -53,12 +59,15 @@ function stepTwoToStepOneOne() {
 	stepTwo.style.display = 'none'
 	stepOneOne.style.display = 'flex'
 	stepOne.style.display = 'flex'
+	progressBarThird.classList.remove('active')
+	progressBarSecond.classList.remove('active')
 }
 
 function stepThreeToStepTwo() {
 	stepThree.style.display = 'none'
 	providers.style.display = 'flex'
 	stepTwo.style.display = 'flex'
+	progressBarThird.classList.remove('active')
 }
 
 // ACCORDION FOR STEP 2
@@ -83,8 +92,13 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 	})
 })
 
+// EVENT LISTENERS TO GO FORWARD
+
 stepOneBtn.addEventListener('click', stepOneToStepOneOne)
-continueBtn.addEventListener('click', stepOneOneToStepTwo)
+stepOneOneBtn.addEventListener('click', stepOneOneToStepTwo)
 stepTwoBtn.addEventListener('click', stepTwoToLoader)
+
+// EVENT LISTENERS TO GO BACK
+
 stepTwoBackBtn.addEventListener('click', stepTwoToStepOneOne)
 stepThreeBackBtn.addEventListener('click', stepThreeToStepTwo)

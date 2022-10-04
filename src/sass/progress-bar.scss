@@ -16,7 +16,9 @@
 		z-index: -1;
 	}
 
-	&__step {
+	&__step__first,
+	&__step__second,
+	&__step__third {
 		width: 23px;
 		height: 23px;
 		background-color: #f9fafb;
@@ -33,18 +35,20 @@
 			counter-increment: step;
 			content: counter(step);
 		}
+	}
 
-		&--active {
-			background-color: #4f4ced;
-			border: 2px solid #4f4ced;
-			color: #ffffff;
-		}
+	.active {
+		background-color: #4f4ced;
+		border: 2px solid #4f4ced;
+		color: #ffffff;
 	}
 }
 
 @media (min-width: 768px) {
 	.progress-bar {
-		&__step {
+		&__step__first,
+		&__step__second,
+		&__step__third {
 			width: 30px;
 			height: 30px;
 			font-size: 16px;
