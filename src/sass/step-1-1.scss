@@ -2,9 +2,10 @@
 	display: none;
 	flex-direction: column;
 	gap: 20px;
-	padding-bottom: 30px;
+	margin: 0px 16px;
+	padding: 30px 0;
 
-	p {
+	&__paragraph {
 		color: #4f4ced;
 		line-height: 28px;
 
@@ -68,6 +69,36 @@
 				box-shadow: none;
 				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M15.88 8.29L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z' fill='%23fff'/%3E %3C/svg%3E");
 			}
+		}
+	}
+
+	&__continue-button {
+		display: flex;
+		cursor: pointer;
+		background-color: #ff782d;
+		border-radius: 5px;
+		border: none;
+		width: 100%;
+		padding: 16px 33px;
+		color: white;
+		font-weight: 700;
+		line-height: 32px;
+		font-size: 24px;
+		text-align: center;
+	}
+}
+
+// MEDIA QUERIES
+
+@media (min-width: 1200px) {
+	.step-1-1 {
+		margin: 0px 100px;
+		ul {
+			width: 35%;
+		}
+
+		button {
+			width: 35%;
 		}
 	}
 }

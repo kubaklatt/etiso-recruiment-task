@@ -1,6 +1,7 @@
 // BACKGROUND
 
 .vector {
+	display: none;
 	&__square {
 		position: fixed;
 		left: 82%;
@@ -23,7 +24,7 @@
 }
 
 .noise {
-	position: absolute;
+	position: fixed;
 	top: 5%;
 	left: 75%;
 	height: 100%;
@@ -56,5 +57,11 @@
 		opacity: 0.5;
 		filter: blur(75px);
 		z-index: -20;
+	}
+}
+
+@media (min-width: 1200px) {
+	.vector {
+		display: block;
 	}
 }

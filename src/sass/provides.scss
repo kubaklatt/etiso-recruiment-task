@@ -1,9 +1,38 @@
 .providers {
 	display: flex;
 	justify-content: space-between;
+	margin: 30px 16px 30px;
 
 	img {
 		height: 100%;
 		width: auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	.providers {
+		margin-left: 100px;
+		justify-content: flex-start;
+		gap: 150px;
+
+		&--sky {
+			order: 1;
+		}
+
+		&--bt {
+			order: 0;
+		}
+
+		&--cc {
+			order: 2;
+		}
+
+		&--vm {
+			order: 3;
+		}
+
+		&--vf {
+			order: 4;
+		}
 	}
 }

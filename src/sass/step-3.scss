@@ -1,19 +1,53 @@
 .step-3 {
-	display: flex;
+	display: none;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	margin: 0px 16px;
+	margin: 50px 16px;
 	gap: 40px;
 
 	&__card {
 		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__card-content {
+		position: relative;
+		display: flex;
 		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		background-color: #ffffff;
 		padding: 35px 21px;
 		box-shadow: 0px 4px 16px #cccccc;
 		border-radius: 10px;
+	}
+
+	&__card-result {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		position: absolute;
+		top: -3%;
+		left: 16%;
+		height: 32px;
+		width: 232px;
+		background: #4f4ced;
+		border-radius: 100px;
+	}
+
+	&__result {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 28px;
+		color: #32ce8d;
+	}
+
+	&__result-info {
+		color: #ffffff;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 28px;
 	}
 
 	&__offer {
@@ -103,32 +137,36 @@
 	&__form {
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-start;
-		gap: 28px;
+		gap: 20px;
+	}
 
-		.label-input {
-			display: flex;
-			flex-direction: column;
-			gap: 10px;
+	&__form-content {
+		padding: 20px 0;
+	}
 
-			h3 {
-				font-size: 18px;
-				font-weight: 700;
-				line-height: 28px;
-				letter-spacing: -0.01em;
-				color: #001429;
-			}
+	&__label-input {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding-bottom: 20px;
 
-			input {
-				background: #ffffff;
-				box-shadow: 0px 4px 16px #cccccc;
-				border-radius: 5px;
-				border: none;
-				font-size: 16px;
-				line-height: 28px;
-				color: #a3a3a3;
-				padding: 15px;
-			}
+		h3 {
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 28px;
+			letter-spacing: -0.01em;
+			color: #001429;
+		}
+
+		input {
+			background: #ffffff;
+			box-shadow: 0px 4px 16px #cccccc;
+			border-radius: 5px;
+			border: none;
+			font-size: 16px;
+			line-height: 28px;
+			color: #a3a3a3;
+			padding: 15px;
 		}
 	}
 
@@ -182,7 +220,7 @@
 		}
 	}
 
-	.button {
+	&__button {
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
@@ -246,6 +284,16 @@
 		a {
 			text-decoration: none;
 			color: #001429;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.step-3 {
+		align-items: center;
+
+		&__form {
+			width: 27%;
 		}
 	}
 }

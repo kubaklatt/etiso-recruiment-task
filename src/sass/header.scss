@@ -1,7 +1,7 @@
 .header {
-	margin: 16px;
 	display: flex;
 	justify-content: space-between;
+	margin: 16px 16px 30px;
 
 	&__safe-and-secure {
 		display: flex;
@@ -10,5 +10,13 @@
 		justify-content: center;
 		gap: 10px;
 		font-size: 14px;
+	}
+}
+
+// MEDIA
+
+@media (min-width: 1200px) {
+	.header {
+		margin: 15px 42px;
 	}
 }
