@@ -37,6 +37,8 @@ function stepTwoToLoader() {
 	setInterval(loadingStep, 3000)
 }
 
+
+
 findAddressBtn.addEventListener('click', stepOneToStepOneOne)
 continueBtn.addEventListener('click', stepOneOneToStepTwo)
 stepTwoBtn.addEventListener('click', stepTwoToLoader)
