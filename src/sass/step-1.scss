@@ -48,6 +48,8 @@
 
 	&__button {
 		display: flex;
+		align-items: center;
+		justify-content: center;
 		cursor: pointer;
 		background-color: #ff782d;
 		border-radius: 5px;

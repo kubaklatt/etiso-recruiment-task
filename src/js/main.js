@@ -33,28 +33,6 @@ function loadingStep() {
 	progressBarThird.classList.add('active')
 }
 
-// ACCORDION FOR STEP 2
-
-const accordionItemHeaders = document.querySelectorAll('.step-2__accordion-item-header')
-
-accordionItemHeaders.forEach(accordionItemHeader => {
-	accordionItemHeader.addEventListener('click', event => {
-		const currentlyActiveAccordionItemHeader = document.querySelector('.step-2__accordion-item-header.active')
-		if (currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== accordionItemHeader) {
-			currentlyActiveAccordionItemHeader.classList.toggle('active')
-			currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0
-		}
-
-		accordionItemHeader.classList.toggle('active')
-		const accordionItemBody = accordionItemHeader.nextElementSibling
-		if (accordionItemHeader.classList.contains('active')) {
-			accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px'
-		} else {
-			accordionItemBody.style.maxHeight = 0
-		}
-	})
-})
-
 // EVENT LISTENERS TO GO FORWARD
 
 stepOneBtn.addEventListener('click', () => {
@@ -93,4 +71,26 @@ stepThreeBackBtn.addEventListener('click', () => {
 	providers.style.display = 'flex'
 	stepTwo.style.display = 'flex'
 	progressBarThird.classList.remove('active')
+})
+
+// ACCORDION FOR STEP 2
+
+const accordionItemHeaders = document.querySelectorAll('.step-2__accordion-item-header')
+
+accordionItemHeaders.forEach(accordionItemHeader => {
+	accordionItemHeader.addEventListener('click', event => {
+		const currentlyActiveAccordionItemHeader = document.querySelector('.step-2__accordion-item-header.active')
+		if (currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== accordionItemHeader) {
+			currentlyActiveAccordionItemHeader.classList.toggle('active')
+			currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0
+		}
+
+		accordionItemHeader.classList.toggle('active')
+		const accordionItemBody = accordionItemHeader.nextElementSibling
+		if (accordionItemHeader.classList.contains('active')) {
+			accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px'
+		} else {
+			accordionItemBody.style.maxHeight = 0
+		}
+	})
 })
