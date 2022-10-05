@@ -172,10 +172,12 @@
 	}
 
 	&__checkbox {
-		display: flex;
-		justify-content: flex-start;
-		gap: 10px;
-		align-items: flex-start;
+		label {
+			display: flex;
+			justify-content: flex-start;
+			gap: 10px;
+			align-items: flex-start;
+		}
 
 		[type='checkbox'] {
 			width: 24px;

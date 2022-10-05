@@ -1,4 +1,5 @@
 // QUERY SELECTORS:
+
 const progressBar = document.querySelector('.progress-bar')
 const progressBarFirst = document.querySelector('.progress-bar__step__first')
 const progressBarSecond = document.querySelector('.progress-bar__step__second')
@@ -22,7 +23,7 @@ const stepThreeBackBtn = document.querySelector('.step-3__back-button')
 
 const loader = document.querySelector('.loader')
 
-// FUNCTIONs TO MOVE FORWARD
+// LOADING STEP
 
 function loadingStep() {
 	loader.style.display = 'none'
@@ -30,44 +31,6 @@ function loadingStep() {
 	stepThree.style.display = 'flex'
 	footer.style.display = 'flex'
 	progressBarThird.classList.add('active')
-}
-
-function stepOneToStepOneOne() {
-	stepOneBtn.style.display = 'none'
-	stepOneOne.style.display = 'flex'
-}
-
-function stepOneOneToStepTwo() {
-	stepOne.style.display = 'none'
-	stepOneOne.style.display = 'none'
-	stepTwo.style.display = 'flex'
-	progressBarSecond.classList.add('active')
-}
-
-function stepTwoToLoader() {
-	progressBar.style.display = 'none'
-	providers.style.display = 'none'
-	footer.style.display = 'none'
-	stepTwo.style.display = 'none'
-	loader.style.display = 'flex'
-	setTimeout(loadingStep, 3000)
-}
-
-// FUNCTIONS TO GO BACK
-
-function stepTwoToStepOneOne() {
-	stepTwo.style.display = 'none'
-	stepOneOne.style.display = 'flex'
-	stepOne.style.display = 'flex'
-	progressBarThird.classList.remove('active')
-	progressBarSecond.classList.remove('active')
-}
-
-function stepThreeToStepTwo() {
-	stepThree.style.display = 'none'
-	providers.style.display = 'flex'
-	stepTwo.style.display = 'flex'
-	progressBarThird.classList.remove('active')
 }
 
 // ACCORDION FOR STEP 2
@@ -94,11 +57,40 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 
 // EVENT LISTENERS TO GO FORWARD
 
-stepOneBtn.addEventListener('click', stepOneToStepOneOne)
-stepOneOneBtn.addEventListener('click', stepOneOneToStepTwo)
-stepTwoBtn.addEventListener('click', stepTwoToLoader)
+stepOneBtn.addEventListener('click', () => {
+	stepOneBtn.style.display = 'none'
+	stepOneOne.style.display = 'flex'
+})
+
+stepOneOneBtn.addEventListener('click', () => {
+	stepOne.style.display = 'none'
+	stepOneOne.style.display = 'none'
+	stepTwo.style.display = 'flex'
+	progressBarSecond.classList.add('active')
+})
+
+stepTwoBtn.addEventListener('click', () => {
+	progressBar.style.display = 'none'
+	providers.style.display = 'none'
+	footer.style.display = 'none'
+	stepTwo.style.display = 'none'
+	loader.style.display = 'flex'
+	setTimeout(loadingStep, 3000)
+})
 
 // EVENT LISTENERS TO GO BACK
 
-stepTwoBackBtn.addEventListener('click', stepTwoToStepOneOne)
-stepThreeBackBtn.addEventListener('click', stepThreeToStepTwo)
+stepTwoBackBtn.addEventListener('click', () => {
+	stepTwo.style.display = 'none'
+	stepOneOne.style.display = 'flex'
+	stepOne.style.display = 'flex'
+	progressBarThird.classList.remove('active')
+	progressBarSecond.classList.remove('active')
+})
+
+stepThreeBackBtn.addEventListener('click', () => {
+	stepThree.style.display = 'none'
+	providers.style.display = 'flex'
+	stepTwo.style.display = 'flex'
+	progressBarThird.classList.remove('active')
+})
